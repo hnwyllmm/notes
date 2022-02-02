@@ -2,6 +2,7 @@
 
 ## Transaction
 [An Empirical Evaluation of InMemory Multi-Version Concurrency Control](1.md) 评估MVCC的可扩展性
+
 [Aether: A Scalable Approach to Logging](3.md) 研究可扩展日志系统
 
 ## SQL
