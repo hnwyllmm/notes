@@ -5,6 +5,8 @@
 
 [Aether: A Scalable Approach to Logging](3.md) 研究可扩展日志系统
 
+[ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](5.md) WAL-based事务系统恢复的方法
+
 ## SQL
 [Volcano An Extensible and Parallel Query Evaluation System](2.md) 火山模型
 
