@@ -7,6 +7,8 @@
 
 [ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](5.md) WAL-based事务系统恢复的方法
 
+[Granularity of Locks and Degrees of Consistency in a Shared Data Base](6.md) consistence
+
 ## SQL
 [Volcano An Extensible and Parallel Query Evaluation System](2.md) 火山模型
 
