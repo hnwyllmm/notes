@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-29T01:44:01.656Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36 Edg/103.0.1264.37" etag="csvTnDbrQwS3Tsdv0xLl" version="20.0.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-07-29T01:51:20.484Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36 Edg/103.0.1264.37" etag="IH0vBs4ds5frIaGzBw7a" version="20.0.1" type="github" pages="3">
   <diagram id="pwMkIPsvEDprH6fOzJRd" name="Page-1">
     <mxGraphModel dx="946" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -229,6 +229,9 @@
         <mxCell id="FWcOqxGEiupWC6EX7OL3-75" value="+ freeze():RC" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="FWcOqxGEiupWC6EX7OL3-70">
           <mxGeometry y="112" width="200" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="KHwNjvTspmsSDNmJ8Xkv-2" value="Q: SSTable 文件的格式&lt;br&gt;Q: SSTable Meta 文件格式" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="400" y="550" width="180" height="100" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -328,6 +331,49 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="130" y="300" as="sourcePoint" />
             <mxPoint x="50" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="oun-FFzPvFo79alFdZaa" name="dump memtable">
+    <mxGraphModel dx="946" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t2xj60I7ahnKXk-A1y4r-1" value="MemTableManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="120" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="t2xj60I7ahnKXk-A1y4r-3" value="new_sstable_name" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;rounded=0;" edge="1" parent="t2xj60I7ahnKXk-A1y4r-1" target="t2xj60I7ahnKXk-A1y4r-2">
+          <mxGeometry width="60" relative="1" as="geometry">
+            <mxPoint x="60" y="70" as="sourcePoint" />
+            <mxPoint x="120" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2xj60I7ahnKXk-A1y4r-4" value="table name , timestamp" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="t2xj60I7ahnKXk-A1y4r-1" source="t2xj60I7ahnKXk-A1y4r-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="110" as="sourcePoint" />
+            <mxPoint x="60" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2xj60I7ahnKXk-A1y4r-5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="t2xj60I7ahnKXk-A1y4r-1">
+          <mxGeometry x="56" y="180" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t2xj60I7ahnKXk-A1y4r-6" value="create file&lt;br&gt;dump to file" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" target="t2xj60I7ahnKXk-A1y4r-5" parent="t2xj60I7ahnKXk-A1y4r-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="61" y="160" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="91" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2xj60I7ahnKXk-A1y4r-2" value="SSTableMeta" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="40" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Dg_A37IZ3KoHxoOuEIxj-1" value="insert new table" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="60" relative="1" as="geometry">
+            <mxPoint x="139.5" y="320" as="sourcePoint" />
+            <mxPoint x="379.5" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
