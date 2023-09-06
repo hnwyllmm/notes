@@ -9,6 +9,8 @@
 
 [Granularity of Locks and Degrees of Consistency in a Shared Data Base](6.md) consistence
 
+[Scalable Garbage Collection for In-Memory MVCC Systems](10.md) 垃圾回收
+
 ## SQL
 [Volcano An Extensible and Parallel Query Evaluation System](2.md) 火山模型
 
