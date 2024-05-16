@@ -14,6 +14,6 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: usthe/issues-translate-action@v2.7
+      - uses: hnwyllmm/issues-translate-action@main
         with:
           IS_MODIFY_TITLE: true
