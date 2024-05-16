@@ -3,6 +3,8 @@ name: Translation Helper
 on:
   pull_request_target:
     types: [opened]
+  pull_request:
+    types: [opened]
   issues:
     types: [opened]
   issue_comment: 
@@ -13,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+      pull-requests: write
     steps:
       - uses: hnwyllmm/issues-translate-action@main
         with:
