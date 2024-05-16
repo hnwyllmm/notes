@@ -17,3 +17,4 @@ jobs:
       - uses: hnwyllmm/issues-translate-action@main
         with:
           IS_MODIFY_TITLE: true
+          token: ${{ secrets.GITHUB_TOKEN }}
