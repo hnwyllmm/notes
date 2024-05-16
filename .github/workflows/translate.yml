@@ -17,4 +17,3 @@ jobs:
       - uses: usthe/issues-translate-action@v2.7
         with:
           IS_MODIFY_TITLE: true
-          BOT_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
