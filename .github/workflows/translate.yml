@@ -12,4 +12,4 @@ jobs:
   translate:
     runs-on: ubuntu-latest
     steps:
-      - uses: hnwyllmm/translation-helper@cda5f50592f79f74d555ff811c3ec3d95bc8d3de
+      - uses: hnwyllmm/issue-transation-helper@main
