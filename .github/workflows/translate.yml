@@ -14,7 +14,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: hnwyllmm/issues-translate-action@main
+      - uses: usthe/issues-translate-action@v2.7
         with:
           IS_MODIFY_TITLE: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          BOT_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
