@@ -1,22 +1,30 @@
-name: Translation Helper
-
+name: 'translator'
 on:
-  pull_request_target:
-    types: [opened]
-  pull_request:
-    types: [opened]
   issues:
-    types: [opened]
-  issue_comment: 
-    types: [created]
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  discussion:
+    types: [created, edited]
+  discussion_comment:
+    types: [created, edited]
+  pull_request_target:
+    types: [opened, edited]
+  pull_request_review_comment:
+    types: [created, edited]
 
 jobs:
   translate:
-    runs-on: ubuntu-latest
     permissions:
       issues: write
+      discussions: write
       pull-requests: write
+    runs-on: ubuntu-latest
     steps:
-      - uses: hnwyllmm/issues-translate-action@main
+      - uses: actions/checkout@v3
+      - uses: lizheming/github-translate-action@v1.1.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           IS_MODIFY_TITLE: true
+          APPEND_TRANSLATION: false
